@@ -7,5 +7,6 @@ RUN apk add --no-cache \
     libc-dev && \
     pecl install -o -f redis && \
     docker-php-ext-enable redis && \
-    docker-php-ext-install pdo_mysql && \
+    docker-php-ext-install pdo_mysql pcntl && \
+    docker-php-ext-enable pcntl && \
     apk del gcc make autoconf
