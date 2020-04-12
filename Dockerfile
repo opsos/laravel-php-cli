@@ -7,4 +7,5 @@ RUN apk add --no-cache \
     libc-dev && \
     pecl install -o -f redis && \
     docker-php-ext-enable redis && \
+    docker-php-ext-install pdo_mysql && \
     apk del gcc make autoconf
